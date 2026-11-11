@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Syed Mufeez">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Syed Mufeez - AI Engineer Portfolio</title>
+    <!--1. Commenting-->
+</head>
+<body id="top">
+    <header>
+        <h1>Syed Mufeez</h1>
+        <h2>AI Engineer (Generative AI/LLM)</h2>
+        <p><q>Turning messy text into clear answers with language models.</q></p>
+        <img width="120" height="120" src="images.jpg" alt="Placeholder portrait for Syed Mufeez">
+        <address>
+            Ongole,Andhra Pradesh, India <br>
+            Email: <a href="mailto:syedmufeezsm26@gmail.com">syedmufeezsm26@gmail.com</a>
+            Phone: <a href="tel:+918142255452">+918142255452</a>
+        </address>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+    
+    </header>
+    <hr>
+    <main>
+        <section id="about">
+            <h2>About me</h2>
+            <p>
+                I'm an <strong>AI and Data Science graduate</strong> with a strong <em>Python</em> and AI Foundation. I have built an LLM-powered 
+                application using the <mark>OpenAI API</mark> and I'm comfortable with the full loop:
+                collecting data, engineering prompts, and evaluating model outputs.
+            </p>
+
+            <p>
+                I'm loosking for entry level <abbr title="Artificial Intelligence">AI</abbr>Engineer
+                role where I can build LLM and generative AI applications, <abbr title="Retrieval-Agumented Genaration">RAG</abbr>
+                pipelines, and AI agents that solve real business problems.
+            </p>
+            <p><small>Last updated: <time datetime="2026-11-06">6<sup>th</sup> November 2026 </time></small></p>
+            </section>
+            <hr>
+            <section id="projects">
+                <h2>Projects</h2>
+                <article>
+                    <h3>Youtube Comment Review Analyzer</h3>
+                    <p><i>Personal Project,2026</i></p>
+                    <p><b>Built With:</b> Python, OpenAI API, Promt Engineering</p>
+                    <ul>
+                        <li>Fetches Youtube Video comments and uses the OpenAI GPT API to summarize them and classify their sentiment.</li>
+                        <li>Designed and iterated on prompts to make sentiment labels and summaries more accurate and consistent.</li>
+                        <li>Structured raw comment data with Pandas before it enters the LLM pipeline, and for later reporting.</li>
+                    </ul>
+                    <details>
+                        <summary>See sample Output</summary>
+                        <figure>
+                            <pre><code>{
+                                "sentiment":"positive",
+                                "confidence":"0.96",
+                                "summary":"Viewer found the explanation clear."
+                            }
+
+                            </code></pre>
+            
+                        </figure>
+                    </details>
+                </article>
+                <article>
+                    <h3>Healthcare Data Analysis Using Pneumonia Dataset</h3>
+                    <p><i>Academic Project</i></p>
+                    <p><b>Built With:</b>Python,Matplotlib,Seaborn</p>
+                    <ul>
+                        <li>Analyzed thousands of healthcare records to find data patterns and target class distributions.</li>
+                        <li>Built automated data cleaning and preprocessing pipelines, then ran exploratory data analysis (EDA).</li>
+                        <li>Built dashboards and statistical summaries to communicate data health and key findings.</li>        
+                    </ul>
+                </article>
+            </section>
+            <hr>
+            <section id="skills">
+                <h2>Skills</h2>
+                <dl>
+                    <dt>Generative AI and LLms</dt>
+                    <dd>OpenAI API(GPT models), Prompt Engineering</dd>
+                    <dt>Programming</dt>
+                    <dd>Python, SQl</dd>
+                    <dt>AI and ML Fundamentals</dt>
+                    <dd>Machine Learning Basics,statistical Analysis</dd>
+                    <dt>Python Libraries</dt>
+                    <dd>Pandas, Numpy, Matplotlib, Seaborn</dd>
+                    <dt>Databases</dt>
+                    <dd>SQL,MYSQLserevr</dd>
+                    <dt>Tools and Platforms</dt>
+                    <dd>Git,GitHub,Jupyter Notebook</dd>
+                </dl>
+                <h3>Learning next</h3>
+                <ol>
+                    <li>Flask</li>
+                    <li>RAG</li>
+                    <li>Agentic Ai</li>
+                </ol>
+            </section>
+            <hr>
+            <section id="education">
+                <h2>Education</h2>
+                <table border ="1" cellpadding="8">
+                    <caption>My education so far</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Years</th>
+                            <th scope="col">Qualification</th>
+                            <th scope="col">School or college</th>
+                            <th scope="col">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021-2025</td>
+                            <td>B.Tech, Computer Science (AI and Data Science)</td>
+                            <td>Dhanalakshmi College Of Engineering, Chennai</td>
+                            <td>CGPA 8.11</td>
+                        </tr>
+                        <tr>
+                            <td>2019-2021</td>
+                            <td>Intermediate (MPC)</td>
+                            <td>Narayana Junior College, Ongole</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td>2018-2019</td>
+                            <td>SSC</td>
+                            <td>Little Angels High School, Ongole</td>
+                            <td>GPA 9.7</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Currently seeking an entry-level AI Engineer role.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>
+                    <label for="cgpa">B.Tech CGPA (out of 10):</label>
+                    <meter id="cgpa" min="0" max="10" value="8.11">8.11 out of 10</meter>
+                    8.11
+                </p>
+            </section>
+            <hr>
+            <section id="contact">
+                <h2>Contact me</h2>
+                <p>Hiring for an AI Engineering role? Fill in this form and your message will be sent to me directly.</p>
+                <form id="contact-form">
+                    <fieldset>
+                        <legend>Your Details</legend>
+                        <p>
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </p>
+                        <p>
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email" placeholder="your@example.com" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone: </label><br>
+                            <input type="tel" id="phone" name="phone">
+                        </p>
+                        <p>
+                            <label for="company">Company:</label><br>
+                            <input type="text" id="company" name="company" list="company-types">
+                            <datalist id="company-types">
+                                <option value="Startup">
+                                    <option value="Product Company">
+                                        <option value="Consulting firm">
+                            </datalist>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Your Message</legend>
+                        <p>
+                            <label for="topic">Topic:</label><br>
+                            <select id="topic" name="topic">
+                                <option value="job">Job opportunity</option>
+                                <option value="project">Project collaboration</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </p>
+                        <p>Preferred reply method: <br>
+                            <input type="radio" id="reply-email" name="reply" value="email" checked>
+                            <label for="reply-email">Email</label>
+                            <input type="radio" id="reply-phone" name="reply" value="phone">
+                            <label for="reply-phone">Phone</label>
+
+                        </p>
+                        <p>
+                            <input type="checkbox" id="remote" name="remote" value="yes">
+                            <label for="remote">This role can be remote</label><br>
+                        </p>
+                        <p>
+                            <label for="message">Message:</label><br>
+                            <textarea id="message" name="message" rows="5" cols="25" required></textarea>
+                        </p>
+                    </fieldset>
+                    <!-- Hidden trap for spam bots: humans never see it, bots fill it in -->
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                    <p>
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Clear form</button>
+                    </p>
+                    <!-- JavaScript writes the success / error message here -->
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+    </main>
+    <hr>
+    <aside>
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="mailto:syedmufeezsm26@gmail.com">Email me</a></li>
+            <li><a href="tel:+918142255452">Phone</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">Learn Html from This!</a></li>
+            <li><a href="#top">Back to Top</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy;2026 Syed Mufeez.Built With Plain HTML.</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

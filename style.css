@@ -1,0 +1,506 @@
+/* ============== My Portfolio Style Css ========
+css must contain 
+selector{
+    property: value;
+    }
+selector = which element (h1,p,section,..)
+property = what to change(color,margin,....)
+value=How to change(red,20px....)
+=====================*/
+
+/*============
+Step 1 ": FONT
+load a font from google fonts
+=========*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+
+/* -----------------
+variables in css means write a colour once here then reuseit with var(--name).*/
+
+:root {
+    --bg: #070a17; /*page background */
+    --card: #0f1428;   /*box background*/
+    --border: #232a4d;  /* thin lines */
+    --text: #e7eaf6;    /*main text*/
+    --muted: #8d96b8;   /*soft grey text*/
+    --cyan: #22d3ee;    /*highlight color 1*/
+    --violet: #8b5cf6;  /*highlight color 2*/
+
+    --gradient: linear-gradient(90deg,#8b5cf6,#22d3ee);
+}
+
+
+/* Basic Page settings
+"*" means every element on the page
+border box makes sizes easier to predict:
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling when you click menu links*/
+
+html {
+    scroll-behavior: smooth;
+}
+/* body= the whole page */
+body{
+    margin:0; /* remove the default white gap */
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color :var(--text);
+    background-color: var(--bg);
+
+    /* A soft purple glow at the top */
+    background-image: radial-gradient(circle at 50% 0%, #1b1647 0%, transparent 55%);
+    background-repeat: no-repeat;
+
+}
+
+/* links*/
+a{
+    color: var(--cyan);
+    text-decoration: none; /*remove the underline */
+
+}
+a:hover{ /* :hover = mouse is on top */
+    text-decoration: underline;
+}
+
+/* headings */
+
+h1,h2,h3 {
+    margin-top:0;
+    line-height:1.25;
+}
+
+/* highlight color when you select text with the mouse */
+
+::selection {
+    background-color: var(--violet);
+    color:#ffffff;
+}
+
+
+/* step 4 page width */
+header,
+main,
+aside,
+footer {
+    max-width : 900px;
+    margin:24px auto;
+    padding:0 16px;
+}
+
+
+
+/* step 5 Header (name , photo , contact)*/
+
+header {
+    text-align: center;
+    padding: 40px 24px 28px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-size:48px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cyan);
+}
+/*Qoute*/
+q {
+    color: var(--muted);
+    font-style: italic;
+    quotes: none;   /*remove the default qoute marks*/
+}
+
+/*profile picture*/
+
+header img {
+    border-radius: 50%;
+    border: 3px solid var(--violet);
+    object-fit: cover;
+    margin:18px 0;
+    box-shadow: 0 0 30px rgba(139,92,246,0.5); /*purple glow*/
+}
+
+
+/* address*/
+
+address{
+    font-style:normal;
+    color:var(--text)
+}
+
+
+/* navigation menu A<ul> is normally vertical list with bullets."display: flex" puts the items in a row. --- */
+
+nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    list-style: none;
+    margin: 24px 0 0;
+    padding:20px 0 0;
+    border-top: 1px solid var(--border);
+}
+nav a {
+    display: block;
+    padding: 8px 18px;
+    color:  var(--text);
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+nav a:hover{
+    background-color: var(--bg);
+    border-color: var(--violet);
+    text-decoration: none;
+    transform: translateY(-3px);
+}
+
+
+/* Sections as cards 
+ Remember the BOX MODEL - every element is a box:
+ 
+       margin   = space OUTSIDE the border
+       border   = the line around the box
+       padding  = space INSIDE the border
+       content  = text / images
+   ---------------------------------------------------------- */
+   section {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: border-color 0.3s ease;
+   }
+
+   section:hover{
+    border-color: var(--violet);
+   }
+
+   section > h2 {
+    display: inline-block;
+    font-size:26px;
+    padding-bottom:6px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid var(--cyan);
+    border-image: var(--gradient) 1;
+   }
+
+   hr {
+    display: none;
+   }
+
+
+   /* Small Text Effects */
+
+   strong { color: #ffffff;}
+   em{
+    color:#06afec;
+    font-style: normal;
+   }
+   mark {
+    background-color: rgba(10, 229, 237, 0.45);
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius:6px;
+   }
+
+   small {color: var(--muted);}
+   time  {color: var(--cyan);}
+
+   abbr[title]{
+    text-decoration: underline dotted var(--violet);
+    cursor:help;
+   }
+
+   /* Projects */
+   article {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--violet);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+   }
+
+   /*Hover =the project card floats up and glows */
+   article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(139,92,246,0.25);
+   }
+
+   article h3 {
+    color: #ffffff;
+    font-size: 20px;
+   }
+
+   article li {
+    margin-bottom: 6px;
+   }
+
+   /* clickable sample output*/
+   details {
+    margin-top:16px;
+    padding: 10px 16px;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+   }
+
+   summary {
+    cursor: pointer;
+    color: var(--cyan);
+    font-weight:600;
+   }
+
+   /* code blocks like terminal */
+
+   pre {
+    margin: 12px 0 0;
+    padding : 16px;
+    overflow-x : auto;
+    background-color: #000000;
+    border-radius: 10px;
+   }
+   code {
+    font-family: Consolas, "Courier New", monospace;
+    color: #7ee787;
+   }
+
+
+   /* Skills*/
+
+   dt {
+    margin-top: 14px;
+    color: var(--cyan);
+    font-weight: 700;
+   }
+   dd {
+    margin-left: 0;
+    color: var(--text);
+   }
+   /* "learning next " list room as pill-shaped */
+   ol {
+    display: flex;
+    gap: 10px ;
+    list-style: none;
+    padding:0;
+   }
+
+   ol li {
+    padding: 4px 18px ;
+    border : 1px solid var(--violet);
+    border-radius: 999px;
+    background-color: rgba(139,92,246,0.12);
+
+   }
+
+
+   /* Education Table */
+
+   table {
+    width:100%;
+    border-collapse: collapse;
+    border:0;
+   }
+
+   th,td {
+    padding:12px;
+    text-align: left;
+    border : 0;
+    border-bottom: 1px solid var(--border) ;
+   }
+
+   th {
+    color: var(--cyan);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   }
+
+   /* Row highlights on hover */
+
+   tbody tr:hover{
+    background-color: rgba(3, 3, 3, 0.934);
+   }
+
+   caption {
+    text-align: left;
+    color:var(--muted);
+    padding-bottom: 10px;
+   }
+   tfoot td {
+    text-align: center;
+    color: #34d399;
+   }
+
+   meter {
+    width: 220px;
+    height: 14px;
+    vertical-align: middle;
+   }
+
+
+   /* Contact Details */
+
+   fieldset {
+    margin-bottom: 18px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+   }
+
+   legend {
+    padding: 0 10px;
+    color: #c4b5fd;
+    font-weight: 600;
+   }
+
+   label {
+    color: var(--muted);
+    font-weight: 600;
+   }
+
+   /* All text boxes , the dropdown and the message area */
+
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 11px 14px;
+        font-family: inherit;                /* use the same font as the page */
+        font-size: 15px;
+        color: var(--text);
+        background-color: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        transition: all 0.2s ease;
+        }
+    
+    /* :focus = the moment you click inside a box */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;                       /* remove the default blue outline */
+        border-color: var(--cyan);
+        box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15);   /* soft cyan ring */
+    }
+
+/* Buttons */
+    button {
+        padding: 12px 26px;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text);
+        background-color: transparent;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* The main button gets the gradient */
+    button[type="submit"] {
+        color: #ffffff;
+        background: var(--gradient);
+        border: none;
+    }
+    
+    button[type="submit"]:hover {
+        box-shadow: 0 10px 25px rgba(34, 211, 238, 0.35);
+    }
+    
+    aside {
+        padding: 22px 26px;
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+    }
+
+    aside h3 {
+        color: #c4b5fd;
+    }
+
+    aside ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    footer {
+        text-align: center;
+        padding-bottom: 40px;
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+
+    @media (max-width:600px){
+        header h1 {
+            font-size: 34px;
+
+        }
+        section {
+            padding: 18px;
+
+        }
+        meter {
+            width : 140px;
+        }
+        table {
+            display: block;
+            overflow-x: auto;
+        }
+    }
+    
+
+
+
+
+    /* Message shown by script.js after sending */
+    #form-status {
+        margin-top: 14px;
+        font-weight: 600;
+    }
+    #form-status.success { color: #34d399; }   /* green */
+    #form-status.error   { color: #f87171; }   /* red */
+
+    button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
