@@ -13,7 +13,7 @@
 // STEP 0: your Web3Forms access key.
 // Get it free at https://web3forms.com -> enter your email -> they send you a key.
 // It is safe to keep in front-end code; it can only send mail to YOUR email.
-const ACCESS_KEY = "2a2de5d9-0d69-46b0-bde5-246210f35c9a";
+const ACCESS_KEY = "930f1768-210d-4048-9076-549e6b2dea24";
 
 // STEP 1: grab the HTML elements we need, using their id.
 const form = document.getElementById("contact-form");
